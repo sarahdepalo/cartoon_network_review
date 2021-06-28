@@ -26,6 +26,11 @@ h2 {
 }
 
 
+.site-title:hover, .site-title:visited {
+    color: white;
+
+}
+
 
 .content {
     margin: 0 auto;
@@ -121,12 +126,97 @@ font-weight: bold;
 
 /* SHOW DETAILS */
 
+form {
+    margin-bottom: 20px;
+}
+
 input {
     display: block;
+    width: 175px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+textarea {
+    display: block;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 4px;
 }
 
 label {
     display: block;
     width: 100%;
+    padding: 3px 0px;
+
+}
+.show-information {
+    margin: 0 auto;
+    width: 960px;
+    padding: 50px 0px 50px 0px;
 }
 
+.show-information h3 {
+    color: #2957a7;
+    font-weight:bold;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.show-information p {
+    width: 80%;
+    padding-top: 5px;
+}
+
+.show-title {
+    font-size: 32px;
+    color: #1b2453;
+    font-weight:bold;
+}
+
+.submit-btn {
+    font-size: 15px;
+    padding: 10px 20px;
+    margin-top: 5px;
+    border: 2px solid white;
+    color: white;
+    background-color: #2957a7;
+    letter-spacing: 1px;
+}
+
+
+.submit-btn:hover {
+font-weight: bold; 
+}
+
+.show-information img {
+    filter: drop-shadow(0 0 0.75rem rgb(7, 22, 54, .5));
+    padding: 20px 0px;
+    max-width: 700px;
+}
+
+.review-box {
+    background-color: #f2f2f2;
+    border-left: 8px solid #2957a7;
+    margin: 10px 0px 25px 0px;
+    padding: 20px;
+    width: 80%;
+    box-shadow: 10px 5px 5px #a3a3a3;
+}
+
+.review {
+    font-style: italic;
+}
+
+.rating {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2957a7;
+}
+
+.reviewer {
+    font-weight: bold;
+}

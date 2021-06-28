@@ -1,7 +1,10 @@
-<h1>${show.show_name}</h1>
-<h3>${show.average_rating}</h3>
-<img src="${show.image_url}" class="">
+<div class="show-information">
+
+<h1 class="show-title">${show.show_name}</h1>
+<h3>Average Rating: ${show.average_rating}</h3>
 <p>${show.show_description}</p>
+<img src="${show.image_url}" class="">
+
 
 <h2>Leave a Review</h2>
 
@@ -9,29 +12,32 @@
     <input type='hidden' name='show_name' value='${show.id}'/>
     <label>
         Enter Your Username
-        <input type="text" name="user_name">
+        <input type="text" name="user_name" placeholder="Your Username">
     </label>
     <label>
         What would you rate the show?
-        <input type="number" min="1" max="5" name="rating">
+        <input type="number" min="1" max="5" name="rating" placeholder="On a scale from 1 - 5">
     </label>
     <label>
         Enter Your Review:
-        <textarea placeholder="Tell us why you love this show...or why you don't" rows="5" cols="60" name="review"></textarea> 
+        <textarea placeholder="Tell us why you love this show...or why you don't..." rows="5" cols="60" name="review"></textarea> 
         </textarea>
     </label>
-    <button type="submit">SUBMIT REVIEW</button>
+    <button type="submit" class="submit-btn">SUBMIT REVIEW</button>
 </form>
 
 <h2>What Others Have to Say</h2>
 
-<div>
     <ul>
         ${reviews.map(review => 
-            `<li><p>${review.user_name}</p></li>
-            <li><p>${review.rating}</p></li>
-            <li><p>${review.review}</p></li>`
+            `<div class="review-box">
+            <li><p class="rating">${review.rating}/5</p></li>
+            <li><p class="review">${review.review}</p></li>
+            <li><p class="reviewer">- ${review.user_name}</p></li>
+        </div>`
         ).join('')}
+            
     </ul>
-</div>
 
+
+</div>
