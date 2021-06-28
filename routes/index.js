@@ -24,7 +24,7 @@ router.get('/:slug?', async (req, res) => {
         const allShowData = await ReviewsModel.getAllShows();
         res.render('template', {
             locals: {
-                title: 'Home Page!',
+                title: 'Review Your Favorite Shows!',
                 data: allShowData
             },
             partials: {
