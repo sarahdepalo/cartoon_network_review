@@ -1,0 +1,12 @@
+.show-image {
+    width: 300px;
+}
+
+input {
+    display: block;
+}
+
+label {
+    display: block;
+    width: 100%;
+}

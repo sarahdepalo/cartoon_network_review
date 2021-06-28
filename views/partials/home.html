@@ -1,0 +1,7 @@
+<h1>${title}</h1>
+<h2>Popular Shows</h2>
+<ul>
+    ${data.map(show => 
+        `<li><a href= "./${show.slug}">${show.show_name}</a></li>`
+    ).join('')}
+</ul>
