@@ -6,6 +6,7 @@ const ReviewsModel = require('../models/ReviewsModel');
 const slugify = require('slugify');
 
 router.get('/:slug?', async (req, res) => {
+    console.log('REQUEST SESSION, ', req.session);
     if (!!req.params.slug) {
         const { slug } = req.params;
         const theShow = await ReviewsModel.getBySlug(slug);
@@ -14,7 +15,8 @@ router.get('/:slug?', async (req, res) => {
             locals: {
                 title: 'Show Details!',
                 show: theShow,
-                reviews: allReviews
+                reviews: allReviews,
+                is_logged_in: req.session.is_logged_in
             },
             partials: {
                 body: 'partials/show-details'
@@ -25,7 +27,8 @@ router.get('/:slug?', async (req, res) => {
         res.render('template', {
             locals: {
                 title: 'Review Your Favorite Shows!',
-                data: allShowData
+                data: allShowData,
+                is_logged_in: req.session.is_logged_in
             },
             partials: {
                 body: 'partials/home'

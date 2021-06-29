@@ -17,11 +17,20 @@
     <nav>
         <ul>
             <li><h1><a href="/" class="site-title">CARTOON NETWORK REVIEWS</a></h1></li>
-            <li><a href="/users/signup" class="navlinks">REGISTER</a></li>
-            <li><a href="/users/login" class="navlinks">LOGIN</a></li>
+            <li><a href="/" class="navlinks">HOME</a></li>
+            ${!!is_logged_in ?
+                `<li><a href="/users/logout" class="navlinks">LOGOUT</a></li>`
+                :
+                `
+                <li><a href="/users/signup" class="navlinks">REGISTER</a></li>
+                <li><a href="/users/login" class="navlinks">LOGIN</a></li>
+                `
+            }
+           
         </ul>
         
     </nav>
+
     ${body}
 </body>
 </html>
