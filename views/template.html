@@ -5,16 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${title}</title>
+    <!-- Bulma -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="./styles/style.css">
-
+    <link rel="stylesheet" href="../styles/style.css">
+    <!-- Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
-        <h1><a href="/" class="site-title">CARTOON NETWORK REVIEWS</a></h1>
+        <ul>
+            <li><h1><a href="/" class="site-title">CARTOON NETWORK REVIEWS</a></h1></li>
+            <li><a href="/users/signup" class="navlinks">REGISTER</a></li>
+            <li><a href="/users/login" class="navlinks">LOGIN</a></li>
+        </ul>
+        
     </nav>
     ${body}
 </body>
