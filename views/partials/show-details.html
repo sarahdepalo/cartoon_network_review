@@ -3,7 +3,7 @@
 <h1 class="show-title">${show.show_name}</h1>
 <h3>Average Rating: ${show.average_rating}</h3>
 <p>${show.show_description}</p>
-<img src="${show.image_url}" class="">
+<img src="${show.image_url}" class="show-details-img">
 
 
 ${!!is_logged_in ? 
@@ -46,6 +46,5 @@ ${!!is_logged_in ?
         ).join('')}
             
     </ul>
-
 
 </div>

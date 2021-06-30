@@ -51,6 +51,7 @@ h2 {
 }
 
 
+
 .content {
     margin: 0 auto;
     width: 960px;
@@ -279,12 +280,57 @@ font-weight: bold;
 }
 
 @media screen and (max-width: 960px) {
+    
+    body {
+        max-width:960px;
+    }
+
+    .site-title {
+        display: block;
+        margin-top: -40px;
+        margin-bottom: -10px;
+        margin-left: 15px;
+    }
+
+    .hero-image {
+        display: flex;
+        width: auto;
+    }
+
     .container {
         flex-direction: column;
         flex-wrap: wrap;
-        width: 100%;
     }
+
+    .container p {
+        width: auto;
+    }
+
+    .columns {
+        flex-direction: row;
+    }
+
     #circle {
         height: 200px;
+        margin: 0;
     }
+
+    .show-details-img {
+        width: 300px;
+    }
+
+    .show-information {
+        width: auto;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+    }
+
+
+    .show-title {
+        text-align:center;
+        font-size: 26px;
+        margin-top: -15px;
+    }
+
 }
