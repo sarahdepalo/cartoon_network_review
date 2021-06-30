@@ -49,7 +49,6 @@ class ReviewsModel {
 
     static async getReviews(showId) {
         try {
-            //Need to fix this so the right reviews show up for the right shows. 
             const response = await db.any(
                 `SELECT * FROM reviews
                 INNER JOIN users on users.id = reviews.user_name

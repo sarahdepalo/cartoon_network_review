@@ -33,7 +33,6 @@ class User {
             const query = `SELECT * FROM users WHERE user_email = '${this.user_email}';`;
             const response = await db.one(query);
             //Check user's password based on the hash 
-            console.log('LOGIN RESPONSE OBJECT: ', response);
             const isValid = this.checkPassword(response.user_password);
             //return a response to the controller, either valid or not
             if (!!isValid) {

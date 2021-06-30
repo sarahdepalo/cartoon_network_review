@@ -6,7 +6,6 @@ const ReviewsModel = require('../models/ReviewsModel');
 const slugify = require('slugify');
 
 router.get('/:slug?', async (req, res) => {
-    console.log('REQUEST SESSION, ', req.session);
     if (!!req.params.slug) {
         const { slug } = req.params;
         const theShow = await ReviewsModel.getBySlug(slug);
@@ -16,7 +15,8 @@ router.get('/:slug?', async (req, res) => {
                 title: 'Show Details!',
                 show: theShow,
                 reviews: allReviews,
-                is_logged_in: req.session.is_logged_in
+                is_logged_in: req.session.is_logged_in,
+                user_id: req.session.user_id
             },
             partials: {
                 body: 'partials/show-details'
@@ -44,8 +44,9 @@ router.post('/', async (req, res) => {
     const newReview = new ReviewsModel(show_name, user_name, review, rating);
 
     const response = await newReview.addReview();
-    console.log('Post response is', response);
-    res.sendStatus(200);
+
+    res.redirect('/');
+    // res.sendStatus(200);
 });
 
 module.exports = router;
